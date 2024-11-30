@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Navbar } from '../components/templates/navbar';
 import { Box } from '../components/atoms/Box';
+import { Typography } from '../components/atoms/Typography';
+import { MiddlePage } from '../components/atoms/Middlepage';
 
 interface Card {
   title: string;
@@ -39,6 +41,8 @@ const Home = ({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) 
   return (
     <Box customStyles="bg-blue-400 min-h-[100vh]">
       <Navbar />
+      <MiddlePage />
+      <Footer />
     </Box>
   );
 };
