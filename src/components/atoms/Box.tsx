@@ -3,7 +3,7 @@ import { MouseEvent, ReactNode } from 'react';
 interface BoxPropTypes {
   children?: ReactNode;
   variant?: keyof typeof variants;
-  customStyles?: string;
+  className?: string;
   onClickEvent?: (event: MouseEvent<HTMLDivElement>) => void;
 }
 
@@ -14,9 +14,9 @@ const variants = {
   colBetween: 'flex flex-col justify-center items-between',
 };
 
-export const Box = ({ children, variant, customStyles, onClickEvent }: BoxPropTypes) => {
+export const Box = ({ children, variant, className, onClickEvent }: BoxPropTypes) => {
   return (
-    <div className={`${variants[variant]} ${customStyles}`} onClick={onClickEvent ? onClickEvent : undefined}>
+    <div className={`${variants[variant]} ${className}`} onClick={onClickEvent ? onClickEvent : undefined}>
       {children}
     </div>
   );

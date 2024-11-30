@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.top-section {
+  /* background-image: url('../../assets/Asset\ 1@2x\ 1.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(151.17deg, #26c2b9 8.69%, #288be7 126.06%);
+}
