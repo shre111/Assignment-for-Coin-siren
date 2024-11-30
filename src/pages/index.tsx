@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { Navbar } from '../components/templates/navbar';
 import { Box } from '../components/atoms/Box';
 import { Typography } from '../components/atoms/Typography';
-import { MiddlePage } from '../components/templates/Middlepage';
+import { MiddlePage } from '../components/templates/Herosection';
 
 interface profile {
   name: string;
