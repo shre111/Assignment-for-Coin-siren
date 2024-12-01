@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import profile from '../../../assets/Ellipse 12.png';
-import flag from '../../../assets/image 17.png';
+import profile from '@/assets/Ellipse 12.png';
+import flag from '@/assets/image 17.png';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const data = {

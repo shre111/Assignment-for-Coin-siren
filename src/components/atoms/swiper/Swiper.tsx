@@ -1,8 +1,8 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, EffectCoverflow } from 'swiper/modules';
+import { EffectCoverflow, Navigation } from 'swiper/modules';
 
 export const SwiperAtom = ({ children }) => {
   return (
@@ -11,17 +11,20 @@ export const SwiperAtom = ({ children }) => {
       grabCursor={true}
       centeredSlides={true}
       slidesPerView={'auto'}
-      initialSlide={1}
+      initialSlide={3}
+      loop={true}
       coverflowEffect={{
         rotate: 0,
-        stretch: 0,
-        depth: 200,
-        modifier: 1,
-        slideShadows: false,
+        stretch: 13,
+        depth: 40,
+        modifier: 8,
+        scale: 1,
+        slideShadows: true,
       }}
-      pagination={{ clickable: true }}
-      modules={[EffectCoverflow, Pagination]}
-      className="w-full max-w-4xl">
+      navigation={true}
+      // pagination={{ clickable: true }}
+      modules={[EffectCoverflow, Navigation]}
+      className="w-full sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
       {children}
     </Swiper>
   );

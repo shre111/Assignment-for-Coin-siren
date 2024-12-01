@@ -1,7 +1,6 @@
-import { SwiperSlide } from 'swiper/react';
-import { Typography } from '../Typography';
-import { SwiperAtom } from './Swiper';
 import React from 'react';
+import { SwiperSlide } from 'swiper/react';
+import { SwiperAtom } from '../atoms';
 
 export const SwiperSlideAtom = ({ data, children }) => {
   return (
@@ -10,7 +9,7 @@ export const SwiperSlideAtom = ({ data, children }) => {
         data.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="flex justify-center swiper-slide"
+            className="flex justify-center swiper-slide min-h-[400px]"
             style={{
               width: '300px',
               transition: 'all 0.3s ease',
